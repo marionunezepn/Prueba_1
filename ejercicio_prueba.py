@@ -1,3 +1,4 @@
+import os
 def creartxt(numero,texto):
 	if(numero==1):
 		archi=open('archivo1.txt','a')
@@ -88,14 +89,17 @@ def ingresar():
 		contador=contador+1
 	promedio=suma/(contador-1)
 	return promedio
-continuar=1
-while(continuar==1):
+def menu():
 	print('------menu-----')
 	print('1.-Suma de vectores')
 	print('2.-Promedio de numeros')
 	print('3.-Dividir un archivo')
 	print('4.-Salir')
 	print('________________')	
+os.system('cls')
+continuar=1
+while(continuar==1):
+	menu()	
 	opcion = int(input('ingrese una opcion: '))
 	if(opcion==1):
 		x=lista1()
@@ -111,7 +115,6 @@ while(continuar==1):
 		print('Revisar los archivos .txt creados')
 	if (opcion==4):
 		continuar=2
-	else:
-		print('opcion incorrecta')
+	
 
 
