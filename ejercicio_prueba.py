@@ -60,15 +60,6 @@ def leertxt():
 	creartxt(3,linea)
 	archi.close()
  
-def leertxt():
-	contador=1
-	archi=open('archivooriginal.txt','r')
-	linea=archi.readline()
-	while linea!="":
-		creartxt(contador,linea)
-		linea=archi.readline()
-		contador=contador+1
-	archi.close()
 def lista1():
 	x=[0,0,0]
 	for i in range (len(x)):
@@ -97,24 +88,30 @@ def ingresar():
 		contador=contador+1
 	promedio=suma/(contador-1)
 	return promedio
-print('------menu-----')
-print('1.-Suma de vectores')
-print('2.-Promedio de numeros')
-print('3.-Dividir un archivo')
-print('4.-Salir')
-print('________________')	
-opcion = int(input('ingrese una opcion: '))
-if(opcion==1):
-	x=lista1()
-	y=lista2()
-	print(x)
-	print(y)
-	print(suma(x,y))
-if(opcion==2):
-	valor=ingresar()
-	print (valor)
-if(opcion==3):
-	leertxt()
-	print('Revisar los archivos .txt creados')
+continuar=1
+while(continuar==1):
+	print('------menu-----')
+	print('1.-Suma de vectores')
+	print('2.-Promedio de numeros')
+	print('3.-Dividir un archivo')
+	print('4.-Salir')
+	print('________________')	
+	opcion = int(input('ingrese una opcion: '))
+	if(opcion==1):
+		x=lista1()
+		y=lista2()
+		print(x)
+		print(y)
+		print(suma(x,y))
+	if(opcion==2):
+		valor=ingresar()
+		print (valor)
+	if(opcion==3):
+		leertxt()
+		print('Revisar los archivos .txt creados')
+	if (opcion==4):
+		continuar=2
+	else:
+		print('opcion incorrecta')
 
 
