@@ -17,7 +17,7 @@ def creartxt(numero,texto):
 def invertir(numero):
 	if(numero==1):
 		archi=open('archivo1.txt','r')
-		linea=archi.read(100)
+		linea=archi.read()
 		cadena = linea
 		var = ''
 		for h in cadena:
@@ -28,7 +28,7 @@ def invertir(numero):
 		archi.close()
 	if(numero==2):
 		archi=open('archivo2.txt','r')
-		linea=archi.read(100)
+		linea=archi.read()
 		cadena = linea
 		var = ''
 		for h in cadena:
@@ -39,7 +39,7 @@ def invertir(numero):
 		archi.close()
 	if(numero==3):
 		archi=open('archivo3.txt','r')
-		linea=archi.read(100)
+		linea=archi.read()
 		cadena = linea
 		var = ''
 		for h in cadena:
