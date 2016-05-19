@@ -17,43 +17,48 @@ def creartxt(numero,texto):
 def invertir(numero):
 	if(numero==1):
 		archi=open('archivo1.txt','r')
-		linea=archi.readline()
-		while linea!="":
-			cadena = linea
-			var = ''
-			for h in cadena:
-				var = h + var
-			ar=open('archivoivertido1.txt','a')
-			ar.write(var)
-			ar.close()
-			linea=archi.readline()
+		linea=archi.read(100)
+		cadena = linea
+		var = ''
+		for h in cadena:
+			var = h + var
+		ar=open('archivoivertido1.txt','a')
+		ar.write(var)
+		ar.close()
 		archi.close()
 	if(numero==2):
 		archi=open('archivo2.txt','r')
-		linea=archi.readline()
-		while linea!="":
-			cadena = linea
-			var = ''
-			for h in cadena:
-				var = h + var
-			ar=open('archivoivertido2.txt','a')
-			ar.write(var)
-			ar.close()
-			linea=archi.readline()
+		linea=archi.read(100)
+		cadena = linea
+		var = ''
+		for h in cadena:
+			var = h + var
+		ar=open('archivoivertido2.txt','a')
+		ar.write(var)
+		ar.close()
 		archi.close()
 	if(numero==3):
 		archi=open('archivo3.txt','r')
-		linea=archi.readline()
-		while linea!="":
-			cadena = linea
-			var = ''
-			for h in cadena:
-				var = h + var
-			ar=open('archivoivertido3.txt','a')
-			ar.write(var)
-			ar.close()
-			linea=archi.readline()
+		linea=archi.read(100)
+		cadena = linea
+		var = ''
+		for h in cadena:
+			var = h + var
+		ar=open('archivoivertido3.txt','a')
+		ar.write(var)
+		ar.close()
 		archi.close()
+ 
+def leertxt():
+	contador=1
+	archi=open('archivooriginal.txt','r')
+	linea=archi.read(100)
+	creartxt(1,linea)
+	linea2=archi.read(100)
+	creartxt(2,linea)
+	linea3=archi.read(100)
+	creartxt(3,linea)
+	archi.close()
  
 def leertxt():
 	contador=1
