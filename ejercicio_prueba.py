@@ -1,3 +1,69 @@
+def creartxt(numero,texto):
+	if(numero==1):
+		archi=open('archivo1.txt','a')
+		archi.write(texto)
+		archi.close() 
+		invertir(1)
+	if(numero==2):
+		archi=open('archivo2.txt','a')
+		archi.write(texto)
+		archi.close()
+		invertir(2)
+	if(numero==3):
+		archi=open('archivo3.txt','a')
+		archi.write(texto)
+		archi.close()	
+		invertir(3)	
+def invertir(numero):
+	if(numero==1):
+		archi=open('archivo1.txt','r')
+		linea=archi.readline()
+		while linea!="":
+			cadena = linea
+			var = ''
+			for h in cadena:
+				var = h + var
+			ar=open('archivoivertido1.txt','a')
+			ar.write(var)
+			ar.close()
+			linea=archi.readline()
+		archi.close()
+	if(numero==2):
+		archi=open('archivo2.txt','r')
+		linea=archi.readline()
+		while linea!="":
+			cadena = linea
+			var = ''
+			for h in cadena:
+				var = h + var
+			ar=open('archivoivertido2.txt','a')
+			ar.write(var)
+			ar.close()
+			linea=archi.readline()
+		archi.close()
+	if(numero==3):
+		archi=open('archivo3.txt','r')
+		linea=archi.readline()
+		while linea!="":
+			cadena = linea
+			var = ''
+			for h in cadena:
+				var = h + var
+			ar=open('archivoivertido3.txt','a')
+			ar.write(var)
+			ar.close()
+			linea=archi.readline()
+		archi.close()
+ 
+def leertxt():
+	contador=1
+	archi=open('archivooriginal.txt','r')
+	linea=archi.readline()
+	while linea!="":
+		creartxt(contador,linea)
+		linea=archi.readline()
+		contador=contador+1
+	archi.close()
 def lista1():
 	x=[0,0,0]
 	for i in range (len(x)):
@@ -42,3 +108,8 @@ if(opcion==1):
 if(opcion==2):
 	valor=ingresar()
 	print (valor)
+if(opcion==3):
+	leertxt()
+	print('Revisar los archivos .txt creados')
+
+
